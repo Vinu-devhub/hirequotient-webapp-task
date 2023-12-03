@@ -13,9 +13,9 @@ export function UserSearch<TData>({ table }: UserSearchProps<TData>) {
         <Search className="search-icon absolute right-4 " />
         <Input
           placeholder="Search users..."
-          value={(table.getColumn("role")?.getFilterValue() as string) ?? ""}
+          value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
           onChange={(event) =>
-            table.getColumn("role")?.setFilterValue(event.target.value)
+            table.getColumn("name")?.setFilterValue(event.target.value)
           }
           className="search h-8 w-[150px] lg:w-[250px] outline"
         />
